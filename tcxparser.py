@@ -4,7 +4,7 @@ import time
 from lxml import objectify
 
 namespace = 'http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'
-
+namespace3 = 'http://www.garmin.com/xmlschemas/ActivityExtension/v2'
 
 class TCXParser:
 
