@@ -69,13 +69,29 @@ class TCXParser:
 
     @property
     def hr_max(self):
-        """Minimum heart rate of the workout"""
+        """Maximum heart rate of the workout"""
         return max(self.hr_values())
 
     @property
     def hr_min(self):
         """Minimum heart rate of the workout"""
         return min(self.hr_values())
+    
+    @property
+    def power_avg(self):
+        """Average power of the workout"""
+        power_data = self.power_values()
+        return sum(power_data)/len(power_data)
+
+    @property
+    def power_max(self):
+        """Maximum power of the workout"""
+        return max(self.power_values())
+
+    @property
+    def power_min(self):
+        """Minimum power of the workout"""
+        return min(self.power_values())
 
     @property
     def pace(self):
